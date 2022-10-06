@@ -10,12 +10,20 @@
 // console.log("calisti");
 //});
 const express = require("express");
+const bodyParser = require("body-parser");
+const {parse} = require("path");
 const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function (req, res) {
-  
-    
-    res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.post("/", function (req, res) {
+  var sayi1 = parseInt(req.body.sayi11);
+  var sayi2 = parseInt(req.body.sayi88);
+  var sonuc = sayi1 + sayi2;
+  res.send(sayi1 + " ve " + sayi2 + " toplaminin sonucu " + "<h1>" + sonuc + "</h1>");
 });
 
 app.listen(3000, function () {

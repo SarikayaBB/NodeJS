@@ -9,6 +9,7 @@
   "author": "Bilal Beşir Sarıkaya",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "express": "^4.18.1",
     "superheroes": "^3.0.0"
   }

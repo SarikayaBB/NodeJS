@@ -20,8 +20,10 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  var sayi1 = parseInt(req.body.sayi11);
-  var sayi2 = parseInt(req.body.sayi88);
+
+  
+  var sayi1 = parseInt(req.body.ilkSayi);
+  var sayi2 = parseInt(req.body.ikinciSayi);
   var sonuc = sayi1 + sayi2;
   res.send(sayi1 + " ve " + sayi2 + " toplaminin sonucu " + "<h1>" + sonuc + "</h1>");
 });
